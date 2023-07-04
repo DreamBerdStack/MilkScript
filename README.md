@@ -4,6 +4,12 @@
 <h1>MilkScript</h1>
 <i>An overall tutorial on how to use it.</i>
 <br><br>
+<h1>BUILDING</h1>
+Build using the <code>make milkscript</code> if you wish to use
+the version of the parser written in Go (which may or may not<br>
+be done at the time of reading this). If you wish to use the beta
+parser (the one written in Python, which also has horrid source code),<br>
+then run it using the <code>make milkscript_test</code> command.
 <h1>FOR CONTRIBUTORS</h1>
 For those who want to upgrade the code within the
 MilkScript repo (since I am a horrid programmer)
