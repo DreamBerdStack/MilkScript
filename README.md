@@ -18,6 +18,7 @@ describes each directory:<br><br>
 
 
 <h1>FOR DEVELOPERS</h1>
+<i>Just saying, since all text is aligned to the center, the example code looks weird. Sorry!</i><br><br>
 MilkScript is stack-based, so a majority
 of data you wish to save will be thrown
 on there. To push to the stack, use the
