@@ -28,4 +28,21 @@ onto the stack.<br>Here's an example:<br><br>
     pour(Hello, world!);
 
 
+To read from a stack register, use the <code>read</code>
+command and call them by address:<br><br>
+
+
+    pour(melkey is coming for you);
+    read(0);
+
+
+Also, every program must end with 'exit()' to declare the
+end of the program:<br><br>
+
+
+    pour(melkey is coming for you);
+    read(0);
+    exit();
+
+
 </div>
