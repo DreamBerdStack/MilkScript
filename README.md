@@ -1,4 +1,6 @@
 <div align="center">
+<i>NOTE: DreamBerd's 'MilkScript' is not to be confused with Remember the Milk's service with the same name!</i>
+<br><br>
 <img src="res/MILK%20SCRIPT.png" width=200 height=200 alt="milkscript logo" style="border-radius: 10px;">
 <br><br>
 <h1>MilkScript</h1>
