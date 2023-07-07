@@ -45,12 +45,25 @@ command and call them by address:<br><br>
     read(0);
 
 
-Also, every program must end with 'exit()' to declare the
+Also, every program must end with <code>exit()</code> to declare the
 end of the program:<br><br>
 
 
     pour(melkey is coming for you);
     read(0);
+    exit();
+
+
+To 'sip' from the 'mug', use the <code>sip</code> command
+to remove the back of the stack, here's an example:
+
+
+    pour(Hi!);
+    pour(This message will be replaced.);
+    sip();
+    pour(This is a replacement!);
+    read(0);
+    read(1);
     exit();
 
 

@@ -6,6 +6,7 @@ import os.path
 pour_cmd = ['p', 'o', 'u', 'r']
 exit_cmd = ['e', 'x', 'i', 't']
 read_cmd = ['r', 'e', 'a', 'd']
+sip_cmd = ['s', 'i', 'p']
 
 def main():
     while True:
@@ -54,6 +55,9 @@ def main():
                 elif cmd == "read":
                     print(stack[int(compile_lines[program_counter + 1])])
                     program_counter += 3
+                elif cmd == "sip":
+                    stack.pop(len(stack) - 1)
+                    program_counter += 3
                 cmd = ""
                 cmd_count = 0
                 continue
@@ -80,6 +84,11 @@ def main():
                 cmd = ""
                 cmd_count = 0
                 continue
+            elif cmd == "sip":
+                stack.pop(len(stack) - 1)
+                program_counter += 3
+                cmd = ""
+                cmd_count = 0
             elif program_counter == len(compile_lines) or program_counter > len(compile_lines):
                 break
             else:
@@ -110,21 +119,16 @@ def main():
                     elif cmd == "read":
                         print(stack[int(compile_lines[program_counter + 1])])
                         program_counter += 3
+                    elif cmd == "sip":
+                        stack.pop(len(stack) - 1)
+                        program_counter += 3
                     cmd = ""
                     cmd_count = 0
                     continue
-                elif compile_lines[program_counter] in pour_cmd:
+                elif compile_lines[program_counter] in pour_cmd or compile_lines[program_counter] in exit_cmd or compile_lines[program_counter] in read_cmd or compile_lines[program_counter] in sip_cmd:
                     cmd += compile_lines[program_counter]
                     program_counter += 1
-                    continue
-                elif compile_lines[program_counter] in exit_cmd:
-                    cmd += compile_lines[program_counter]
-                    program_counter += 1
-                    continue
-                elif compile_lines[program_counter] in read_cmd:
-                    cmd += compile_lines[program_counter]
-                    program_counter += 1
-                    continue                    
+                    continue                   
                 else:
                     print(f'Error at col {program_counter}: {compile_lines[program_counter]} is undefined!')
                     break
